@@ -66,7 +66,7 @@ A continuación una breve descripción de cada tabla:
 
 
 
-**NOTA:** Se implementó un trigger en la tabla MATRICULAS que actualiza el valor del carnet (si aplica), valor de descuento por pronto pago (según porcentaje configurado en el periodo), fecha inicio de pago, fecha límite de pago y fecha límite de pronto pago.
+**NOTA:** Se implementó un trigger en la tabla MATRICULAS que actualiza el valor del carnet (si aplica), valor de descuento por pronto pago (según porcentaje configurado en el periodo), fecha inicio de pago, fecha de inicio y límite de pago, y fecha límite de pronto pago.
 
 ```sql
 CREATE DEFINER=`fabio`@`%` TRIGGER FECHAPAGO
