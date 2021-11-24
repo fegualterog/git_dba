@@ -71,7 +71,12 @@ NOTA: Se implementó un trigger en la tabla MATRICULAS que actualiza el valor de
 
 La Query que permite determinar cuantos estudiantes por periodo estan cursando semestre (matricula paga).
 
-select date_format(M.MATR_FECHAREGISTRO, '%Y') as 'AÑO',M.SEM_ID AS 'SEMESTRE', C.CARR_PROGRAMA AS 'PROGRAMA', count(*) as 'TOTAL' from MATRICULAS M
+select 
+date_format(M.MATR_FECHAREGISTRO, '%Y') as 'AÑO',
+M.SEM_ID AS 'SEMESTRE', 
+C.CARR_PROGRAMA AS 'PROGRAMA', 
+count(*) as 'TOTAL' 
+from MATRICULAS M
 inner join CARRERAS C on (M.CARR_ID=C.CARR_ID)
 inner join ESTADOMATRICULA EM on (EM.ESTMATR_ID=M.ESTMATR_ID)
 where 
@@ -80,7 +85,12 @@ group by date_format(M.MATR_FECHAREGISTRO, '%Y'), M.SEM_ID, M.CARR_ID;
 
 
 
-select date_format(M.MATR_FECHAREGISTRO, '%Y') as 'AÑO',M.SEM_ID AS 'SEMESTRE', C.CARR_PROGRAMA AS 'PROGRAMA', count(*) as 'TOTAL' from MATRICULAS M
+select 
+date_format(M.MATR_FECHAREGISTRO, '%Y') as 'AÑO',
+M.SEM_ID AS 'SEMESTRE',
+C.CARR_PROGRAMA AS 'PROGRAMA',
+count(*) as 'TOTAL' 
+from MATRICULAS M
 inner join CARRERAS C on (M.CARR_ID=C.CARR_ID)
 where 
 M.ESTMATR_ID = 2 -- id 2 es PAGO
