@@ -19,6 +19,8 @@ vigencia del descuento de pronto pago.
 • El estudiante debe poder cursar dos carreras al mismo tiempo.
 
 
+![alt text](https://github.com/fegualterog/git_dba/blob/main/modelo.png)
+
 El modelo de datos que se implemento cuenta con 8 tablas:
 
 - ESTUDIANTE
