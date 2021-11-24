@@ -131,5 +131,6 @@ Respuesta de la consulta:
 | 2020 | 1 | SISTEMAS | 1 | 
 | 2021 | 1 | SISTEMAS | 1 | 
 | 2021 | 1 | FISICA | 1 | 
+| 2021 | 1 | MEDICINA | 1 | 
 | 2021 | 2 | SISTEMAS | 1 | 
 | 2021 | 2 | ESTADISTICA | 2 | 
