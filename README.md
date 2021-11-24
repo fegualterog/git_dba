@@ -68,8 +68,30 @@ A continuación una breve descripción de cada tabla:
 
 **NOTA:** Se implementó un trigger en la tabla MATRICULAS que actualiza el valor del carnet (si aplica), valor de descuento por pronto pago (según porcentaje configurado en el periodo), fecha límite de pago y fecha límite de pronto pago.
 
+```sql
+CREATE DEFINER=`fabio`@`%` TRIGGER FECHAPAGO
+       BEFORE INSERT
+       ON UNIVERSIDAD.MATRICULAS FOR EACH ROW
+   BEGIN
+       DECLARE _VALOR DECIMAL(16,6);
+       DECLARE _DESCUENTO DECIMAL(16,6);
+       DECLARE _FECHAPAGOINICIO DATETIME;
+       DECLARE _FECHAPAGOFIN DATETIME;
+       DECLARE _FECHAPAGOPRONTO DATETIME;
+       DECLARE _VALORCARNET DECIMAL(16,6);
+	   
+	   SELECT C.CARR_VALOR, ROUND((C.CARR_VALOR * ( S.SEM_PORCENTAJEDESCUENTO) / 100 ), 6), S.SEM_FECHAPAGOINICIO, S.SEM_FECHAPAGOFIN, S.SEM_FECHAPAGOPRONTO, S.SEM_VALORCARNET  INTO _VALOR, _DESCUENTO, _FECHAPAGOINICIO, _FECHAPAGOFIN, _FECHAPAGOPRONTO, _VALORCARNET  FROM UNIVERSIDAD.CARRERAS C, UNIVERSIDAD.SEMESTRE S where S.SEM_ID = NEW.SEM_ID AND C.CARR_ID = NEW.CARR_ID;
+	   
+	   
+	   SET NEW.MATR_VALOR = _VALOR;
+	   SET NEW.MATR_DESCUENTO = _DESCUENTO;
+	   SET NEW.MATR_FECHAPAGOINICIO = _FECHAPAGOINICIO;
+	   SET NEW.MATR_FECHAPAGOFIN = _FECHAPAGOFIN;
+	   SET NEW.MATR_FECHAPAGOPRONTO = _FECHAPAGOPRONTO;
+       SET NEW.MATR_CARNETVALOR = IF(NEW.MATR_CARNET = b'1', _VALORCARNET, 0.0);
 
-
+   END
+```
 
 
 La Query que permite determinar cuantos estudiantes por periodo estan cursando semestre (matricula paga).
