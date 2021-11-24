@@ -54,7 +54,7 @@ A continuación una breve descripción de cada tabla:
 - Link de pago online.
 - Tipo de pago del recibo (ventanilla o pago online).
 - Referencia y valor del pago.
-- fecha límite de pago y de pronto pago
+- Fecha de inicio de pago, límite de pago y de pronto pago.
 - Fecha de generación del recibo.
 
 
@@ -62,7 +62,7 @@ A continuación una breve descripción de cada tabla:
 
 **TIPOPAGO:** Tiene almacenada la información del modo de pago (pago online o ventanilla).
 
-**SEMESTRE:** Es la tabla de configuración de los periodos, en los cuales es posible especificar el periodo, fecha de límite de pago, fecha de pronto pago, porcentaje de descuento por pronto pago y valor del carnet para el periodo.
+**SEMESTRE:** Es la tabla de configuración de los periodos, en los cuales es posible especificar el periodo, fecha de inicio y límite de pago, fecha de pronto pago, porcentaje de descuento por pronto pago y valor del carnet para el periodo.
 
 
 
