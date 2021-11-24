@@ -86,7 +86,7 @@ EM.ESTMATR_DESCRIPCION = 'PAGO'
 group by date_format(M.MATR_FECHAREGISTRO, '%Y'), M.SEM_ID, M.CARR_ID;
 ```
 
-
+```sql
 select 
 date_format(M.MATR_FECHAREGISTRO, '%Y') as 'AÑO',
 M.SEM_ID AS 'SEMESTRE',
@@ -97,6 +97,7 @@ inner join CARRERAS C on (M.CARR_ID=C.CARR_ID)
 where 
 M.ESTMATR_ID = 2 -- id 2 es PAGO
 group by date_format(M.MATR_FECHAREGISTRO, '%Y'), M.SEM_ID, M.CARR_ID;
+```
 
 Respuesta de la consulta:
 
