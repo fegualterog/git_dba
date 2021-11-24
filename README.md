@@ -22,19 +22,12 @@ vigencia del descuento de pronto pago.
 El modelo de datos que se implemento cuenta con 8 tablas:
 
 ESTUDIANTE
-
 TIPODOCUMENTO
-
 CARRERAS
-
 TIPOPROGRAMA
-
 MATRICULAS
-
 ESTADOMATRICULA
-
 TIPOPAGO
-
 SEMESTRE
 
 
