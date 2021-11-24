@@ -1,5 +1,5 @@
 # git_dba
-Prueba DBA: modelo de datos.
+## Prueba DBA: modelo de datos.
 
 Una prestigiosa universidad requiere de un sistema que permita realizar el pago de
 matrículas a los estudiantes. Los pagos son realizados mediante la generación de un recibo
@@ -33,15 +33,15 @@ El modelo de datos que se implemento cuenta con 8 tablas:
 
 A continuación una breve descripción de cada tabla:
 
-ESTUDIANTE: Tiene almacenada la información básica de cada estudiante como lo es nombre, apellido, tipo de documento, número documento, fecha de nacimiento y fecha del registro del estudiante.
+**ESTUDIANTE:** Tiene almacenada la información básica de cada estudiante como lo es nombre, apellido, tipo de documento, número documento, fecha de nacimiento y fecha del registro del estudiante.
 
-TIPODOCUMENTO: Tiene almacenada la información de los tipos de documento, su alias, y la fecha en que se registró la información.
+**TIPODOCUMENTO:** Tiene almacenada la información de los tipos de documento, su alias, y la fecha en que se registró la información.
 
-CARRERAS: Tiene almacenada la información de la facultad, programa, tipo de programa, valor del semestre y fecha en que se registró la información.
+**CARRERAS:** Tiene almacenada la información de la facultad, programa, tipo de programa, valor del semestre y fecha en que se registró la información.
 
-TIPOPROGRAMA: Tiene almacenada la información de los tipos de programa como lo son pregrado, postgrado, maestría, doctorado, diplomado, y la fecha en que se registro la información.
+**TIPOPROGRAMA:** Tiene almacenada la información de los tipos de programa como lo son pregrado, postgrado, maestría, doctorado, diplomado, y la fecha en que se registro la información.
 
-MATRICULAS: Tiene almacenada la información de todos los recibos de pago generados y su estado. Por medio de las relaciones a otras tablas desde la tabla matricula es posible determinar la información de:
+**MATRICULAS:** Tiene almacenada la información de todos los recibos de pago generados y su estado. Por medio de las relaciones a otras tablas desde la tabla matricula es posible determinar la información de:
 - Estudiante
 - Carrera del estudiante.
 - Estado de la matrícula (pendiente, pago, anulado).
@@ -56,15 +56,15 @@ MATRICULAS: Tiene almacenada la información de todos los recibos de pago genera
 - Fecha de generación del recibo.
 
 
-ESTADOMATRICULA: Tiene almacenada la información de los estados de las matrículas (pendiente, pago, anulado).
+**ESTADOMATRICULA:** Tiene almacenada la información de los estados de las matrículas (pendiente, pago, anulado).
 
-TIPOPAGO: Tiene almacenada la información del modo de pago (pago online o ventanilla).
+**TIPOPAGO:** Tiene almacenada la información del modo de pago (pago online o ventanilla).
 
-SEMESTRE: Es la tabla de configuración de los periodos, en los cuales es posible especificar el periodo, fecha de límite de pago, fecha de pronto pago, porcentaje de descuento por pronto pago y valor del carnet para el periodo.
+**SEMESTRE:** Es la tabla de configuración de los periodos, en los cuales es posible especificar el periodo, fecha de límite de pago, fecha de pronto pago, porcentaje de descuento por pronto pago y valor del carnet para el periodo.
 
 
 
-NOTA: Se implementó un trigger en la tabla MATRICULAS que actualiza el valor del carnet (si aplica), valor de descuento por pronto pago (según porcentaje configurado en el periodo), fecha límite de pago y fecha límite de pronto pago.
+**NOTA:** Se implementó un trigger en la tabla MATRICULAS que actualiza el valor del carnet (si aplica), valor de descuento por pronto pago (según porcentaje configurado en el periodo), fecha límite de pago y fecha límite de pronto pago.
 
 
 
