@@ -101,10 +101,11 @@ group by date_format(M.MATR_FECHAREGISTRO, '%Y'), M.SEM_ID, M.CARR_ID;
 
 Respuesta de la consulta:
 
-# AÑO, SEMESTRE, PROGRAMA, TOTAL
-'2019', '1', 'FISICA', '1'
-'2020', '1', 'SISTEMAS', '1'
-'2021', '1', 'SISTEMAS', '1'
-'2021', '1', 'FISICA', '1'
-'2021', '2', 'SISTEMAS', '1'
-'2021', '2', 'ESTADISTICA', '2'
+| AÑO | SEMESTRE | PROGRAMA | TOTAL |
+| --- | -------- | -------- | ----- |
+| 2019 | 1 | FISICA | 1 | 
+| 2020 | 1 | SISTEMAS | 1 | 
+| 2021 | 1 | SISTEMAS | 1 | 
+| 2021 | 1 | FISICA | 1 | 
+| 2021 | 2 | SISTEMAS | 1 | 
+| 2021 | 2 | ESTADISTICA | 2 | 
